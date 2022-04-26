@@ -40,7 +40,7 @@ public class FrontController extends HttpServlet {
 
 	private void actionDo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		MCommand command1 = 1;
+		MCommand command1 = null;
 		
 		String url = request.getRequestURI();
 		
@@ -49,7 +49,8 @@ public class FrontController extends HttpServlet {
 		String command = url.substring(conPath.length());
 		
 		
-		if(command.equals("/insert.do")) {
+		if(command.equals("/loginOk.do")) {
+			
 			
 		} else if(command.equals("/delete.do")) {
 			command1 = new BDeleteCommand();

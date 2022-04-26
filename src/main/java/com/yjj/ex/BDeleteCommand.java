@@ -1,17 +1,16 @@
 package com.yjj.ex;
 
-import java.lang.reflect.Member;
-
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 public class BDeleteCommand implements MCommand {
 
 	@Override
-	public void excute(HttpServletRequest request, HttpServletRequest response) {
+	public void excute(HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
 
 		String id = request.getParameter("id");
-		Member dao = new MemberDao();
+		MemberDao dao = new MemberDao();
 		dao.deleteMember(id);
 		
 		
